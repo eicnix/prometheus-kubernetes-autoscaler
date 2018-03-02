@@ -1,0 +1,26 @@
+alertmanager:
+  extraArgs:
+    log.level: debug
+  persistentVolume:
+    enabled: false
+
+kubeStateMetrics:
+  enabled: false
+nodeExporter:
+  enabled: false
+
+alertmanagerFiles:
+  alertmanager.yml: |-
+    global:
+      resolve_timeout: 5m
+      
+    route:
+      group_by: ['service']
+      group_wait: 10s
+      group_interval: 10s 
+      repeat_interval: 1h
+      receiver: 'webhook'
+    receivers:
+    - name: 'webhook'
+      webhook_configs:
+      - url: 'http://prometheus-kubernetes-autoscaler-go/alert'

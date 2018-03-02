@@ -1,0 +1,5 @@
+charts:
+  - name: prometheus
+    namespace: default
+    chart: stable/prometheus
+    values: [ values.yaml ]
