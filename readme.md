@@ -22,8 +22,9 @@ receivers:
     - url: 'http://prometheus-kubernetes-autoscaler-go/alert
 ```
 
+
 | name | description |
-| --- | --- | --- |
+| --- | --- | 
 | deployment|name of the deployment that should be scaled |
 | action|scaling that should be performed. Either `up` or `down` |
 
