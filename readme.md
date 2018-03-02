@@ -23,9 +23,9 @@ receivers:
 ```
 
 | name | description |
-|-|-|-|
-|deployment|name of the deployment that should be scaled|
-|action|scaling that should be performed. Either `up` or `down`|
+| --- | --- | --- |
+| deployment|name of the deployment that should be scaled |
+| action|scaling that should be performed. Either `up` or `down` |
 
 ## Installation
 To run this project you need the following tools:
